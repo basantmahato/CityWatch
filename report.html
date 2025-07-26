@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixMyRoad - Report Road Issues</title>
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CityWatch</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="working.html">How It Works</a></li>
+      <li><a href="#report">Report</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">
+      ☰
+    </div>
+  </nav>
+<!-- nav end -->
+
+<!-- Complaint Box Container -->
+  <div class="report-form-container">
+  <h2>📢 Report an Issue</h2>
+  <form id="issueForm">
+
+    <!-- Name -->
+    <label for="name">👤 Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+    <!-- Address -->
+    <label for="address">📍 Location of Issue</label>
+    <textarea id="address" name="address" rows="3" placeholder="Street, landmark, area, city" required></textarea>
+
+    <!-- Issue Type -->
+    <label for="issueType">🚨 Type of Issue</label>
+    <select id="issueType" name="issueType">
+      <option value="pothole">Pothole</option>
+      <option value="waste">Waste Accumulation</option>
+      <option value="electricity">Electricity</option>
+      <option value="waterlogging">Waterlogging</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Upload Image -->
+    <label for="issueImage">📷 Upload Photo (Optional)</label>
+    <input type="file" id="issueImage" name="issueImage" accept="image/*">
+
+    <!-- Submit -->
+    <button type="submit">✅ Submit Complaint</button>
+  </form>
+
+  <div id="issueFormPopup" class="popup-message">✅ Your complaint has been submitted!</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>FixMyRoad</h2>
+      <p>Safer Roads, Smarter Cities</p>
+    </div>
+
+    <div class="footer-info">
+      <p>📍 Jamshedpur, Jharkhand</p>
+      <p>📧 support@fixmyroad.in</p>
+      <p>© 2025 FixMyRoad</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
